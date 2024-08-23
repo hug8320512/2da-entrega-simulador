@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <section id="banner">
+        <div class="hero">
+            <div class="logo">
+                <img src="img/logo-borda.png" alt="">
+            </div>
+            <div class="titulo">
+                <h1>BIENVENIDOS</h1>
+                <p>BORDADOS COMPUTARIZADOS DE ALTA DEFINICIÓN</p>
+            </div>
+            <div class="content-button">
+                <a href="#cotizar"><button class="button button3">COTIZAR</button>
+                </div></a>
+      
+        </div>
+        
+    </section>
+    <section id="cotizar">
+        <div class="title-cotizar">
+            <h1>PARA SABER LOS PRECIOS DE NUESTROS BORDADOS UTILIZA NUESTRO SIMULADOR!</h1>
+        </div>
+        <div class="cotizador-form">
+            <h2>COTIZA TU BORDADO</h2>
+            <form id="cotizador">
+                <label for="prenda">Tipo de Prenda:</label>
+                <select id="prenda" name="prenda">
+                    <option value="camiseta">Camiseta</option>
+                    <option value="gorra">Gorra</option>
+                    <option value="chaqueta">Chaqueta</option>
+                    <option value="bolsa">Bolsa</option>
+                </select>
+        
+                <label for="tamano">Tamaño del Bordado:</label>
+                <select id="tamano" name="tamano">
+                    <option value="pequeno">Pequeño (hasta 10x10 cm)</option>
+                    <option value="mediano">Mediano (hasta 20x20 cm)</option>
+                    <option value="grande">Grande (más de 20x20 cm)</option>
+                </select>
+        
+                <label for="complejidad">Complejidad del Diseño:</label>
+                <select id="complejidad" name="complejidad">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+        
+                <label for="cantidad">Cantidad de Prendas:</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+        
+                <label for="comprobante">Tipo de Comprobante:</label>
+                <select id="comprobante" name="comprobante">
+                    <option value="nota">Nota Simple</option>
+                    <option value="factura">Factura (+16% IVA)</option>
+                </select>
+                <label for="imagen">Subir Diseño (opcional):</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+        
+                <input type="button" value="Calcular Precio" onclick="calcularPrecio()">
+            </form>
+        
+            <div id="resultado" class="result"></div>
+        </div>
+    </section>
+   
+
+    <script src="js/main.js"></script>
+</body>
+</html>
